@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ElementosModule } from './elementos/elementos.module';
@@ -28,6 +29,28 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BarrademenuComponent } from './barrademenu/barrademenu.component';
 
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { HomeComponent } from './home/home.component';
+import { SharedModule } from './shared/shared.module';
+
+import { MatGridListModule } from '@angular/material/grid-list';
+import { PacienteComponent } from './paciente/paciente.component';  
+
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { ListaComponent } from './lista/lista.component';
+
+import { MatTableModule } from '@angular/material/table';
+import { DialogoComponent } from './dialogo/dialogo.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReservaDeHorasComponent } from './reserva-de-horas/reserva-de-horas.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
+import { CitasMedicasComponent } from './citas-medicas/citas-medicas.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +60,16 @@ import { BarrademenuComponent } from './barrademenu/barrademenu.component';
     Pais1Component,
     Pais2Component,
     Pais3Component,
-    BarrademenuComponent
+    BarrademenuComponent,
+    HomeComponent,
+    PacienteComponent,
+    ListaComponent,
+    DialogoComponent,
+    ReservaDeHorasComponent,
+    DashboardComponent,
+    LoginComponent,
+    RegistroUsuarioComponent,
+    CitasMedicasComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +86,14 @@ import { BarrademenuComponent } from './barrademenu/barrademenu.component';
     FormsModule,
     MatRadioModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    CollapseModule,
+    SharedModule,
+    MatGridListModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatDialogModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

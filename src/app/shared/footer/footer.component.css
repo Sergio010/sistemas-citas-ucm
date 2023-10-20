@@ -1,0 +1,14 @@
+.footer{
+    background-color: #253e85;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin: 0px;
+}
+
+.infoFooter{
+    color: white;
+    text-align: center;
+}

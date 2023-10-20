@@ -1,0 +1,54 @@
+$whiteColor: white;
+$d55Color: #253e85;
+
+.container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  .sidenav{
+    background-color: $d55Color;
+
+    .toolbar{
+      color: $d55Color;
+      background-color: $whiteColor;
+      display: flex;
+      justify-content: center;
+    }
+
+    /*
+    * Navigation
+    */
+    .mat-list-item a{
+      background-color: white;
+      color: $whiteColor;
+      text-decoration:#253e85;
+    }
+  }
+
+  .mat-sidenav-content{
+    .toolbar{
+      color: $whiteColor;
+      background-color: $d55Color;
+    }
+  }
+
+
+.mat-button{
+    color: white;
+    background-color: white;
+
+ }
+ .spacer{
+   flex: 3 5 auto;
+ }
+
+.mat-button:hover{
+   cursor: pointer;
+   color: #3f51b5;
+
+}
+
+}

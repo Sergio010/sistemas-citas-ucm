@@ -1,17 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { Articulo } from './articulo';
+import { DialogoComponent } from './dialogo/dialogo.component'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent{
   title = 'ejemplos';
-  opciones = [
-    "Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4", "Opcion 5"
-  ];
-  
-  presion(op: number) {
-    alert("Se informa que se presiono la opcion " + op);
-  }
+
 }

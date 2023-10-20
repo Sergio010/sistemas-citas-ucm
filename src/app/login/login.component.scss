@@ -1,0 +1,50 @@
+
+.container-login{
+
+    
+width: 590px;  //establece el ancho de un elemento.
+height: 413px; //especifica la altura de un elemento
+padding: 5px; // establece el área de relleno en los cuatro lados de un elemento a la vez.
+border-radius: 50px; //redondea las esquinas del borde exterior de un elemento. 
+-webkit-shape-inside: rectangle(0,0,100%,100%,50px,50px); //La propiedad interna permite que el contenido en línea fluya dentro de rutas definidas de forma personalizada, como círculos, polígonos y elipses.
+background-color: white; //color de fondo
+font-size: 0.9em; // establece el tamaño de la fuente.
+text-align: justify; //establece la alineación horizontal del contenido de nivel en línea dentro de un elemento de bloque o cuadro de celda de tabla. 
+padding: 0rem; //establece el área de relleno en los cuatro lados de un elemento a la vez.
+display: flex; //establece si un elemento se trata como un bloque o un cuadro en línea
+justify-content: center; //define cómo el navegador distribuye el espacio entre y alrededor de los elementos de contenido a lo largo del eje principal de un contenedor flexible y el eje en línea de un contenedor de cuadrícula.
+margin-top: 0px; // establece el área del margen en la parte superior de un elemento. 
+border-color: navy;
+border-width: 1px;
+border-style: solid;
+}
+
+.container-padre{
+
+    display: flex;
+    justify-content: center;
+    background-color:#253e85;
+    font-family: 'Montserrat', sans-serif;
+}
+.l1{
+    color: #039be5;
+}
+
+.h3{
+    color: #039be5;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 30px;
+}
+
+.btnS{ 
+
+    margin-left: 20px;
+}
+
+.inputStyle{
+    border-color: #253e85;
+    width: 115%;
+    margin-right: 5%;
+
+}

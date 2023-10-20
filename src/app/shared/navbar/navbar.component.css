@@ -1,0 +1,25 @@
+.mat-toolbar{
+    background-color:#253e85;
+    color: white;
+  }
+  .mat-button{
+     color: white;
+     background-color: white;
+
+  }
+  .spacer{
+    flex: 1 1 auto;
+  }
+
+.mat-button:hover{
+    cursor: pointer;
+    color: #3f51b5;
+
+}
+
+.linea{
+  background-color: black; 
+  margin-top: 100px; 
+  color: black;
+}
+
