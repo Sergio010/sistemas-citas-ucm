@@ -6,19 +6,15 @@
       
         <mat-sidenav mode="side" opened class="sidenav">
   
-          <mat-toolbar class="toolbar">USER()</mat-toolbar>
+          <mat-toolbar class="toolbar">Usuario</mat-toolbar>
           
           <!-- Elements list menu -->
       
           <mat-list>
-      
-            <mat-list-item *ngFor="let item of links"> 
-      
-              <a matLine [routerLink]="item.url">{{ item.name }}</a>
-      
-            </mat-list-item>
-      
-          </mat-list>
+            <mat-list-item><a href="home" style="color: white; text-decoration: none;">Home</a></mat-list-item>
+            <mat-list-item><a href="dashboard/citas-medicas" style="color: white; text-decoration: none;">Mis citas</a></mat-list-item>
+            <mat-list-item><a href="dashboard/reserva-cita" style="color: white; text-decoration: none;">Nueva cita</a></mat-list-item>
+           </mat-list>
       
         </mat-sidenav>
       

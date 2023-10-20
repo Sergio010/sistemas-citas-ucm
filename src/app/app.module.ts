@@ -51,6 +51,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { CitasMedicasComponent } from './citas-medicas/citas-medicas.component';
 
+import { MatMenuModule } from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -94,6 +96,7 @@ import { CitasMedicasComponent } from './citas-medicas/citas-medicas.component';
     MatTableModule,
     MatDialogModule,
     ReactiveFormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,15 +9,15 @@ export class DashboardComponent {
     links = [
       {
         name: "Inicio",
-        url: ""
+        url: "home"
       },
       {
-        name: "Lista",
-        url: "list"
+        name: "Mis Citas",
+        url: "citas-medicas"
       },
       {
-        name: "Formulario",
-        url: "form"
+        name: "Reserva de cita",
+        url: "reserva-de-horas"
       }
     ];
 }

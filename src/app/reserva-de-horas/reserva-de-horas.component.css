@@ -1,0 +1,10 @@
+.c-principal{
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+}
+.c-secund{
+    border-color: red;
+    border-width: 1px;
+    border-style: solid;
+}

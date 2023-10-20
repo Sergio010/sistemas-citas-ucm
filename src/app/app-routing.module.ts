@@ -10,6 +10,9 @@ import { PacienteComponent } from './paciente/paciente.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { HomeComponent } from './home/home.component';
+import { ReservaDeHorasComponent } from './reserva-de-horas/reserva-de-horas.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CitasMedicasComponent } from './citas-medicas/citas-medicas.component';
 
 const routes: Routes = [
 {
@@ -25,13 +28,20 @@ const routes: Routes = [
 },
 
 {
-},
-{
+  path: 'dashboard', component: DashboardComponent,children:
+  [{path:'reserva-cita',component:ReservaDeHorasComponent},
+   {path:'citas-medicas',component:CitasMedicasComponent}],
+  
 },
 
 {
   path:'paciente',component:PacienteComponent
-}
+},
+
+{
+  path:'dashboard',component:DashboardComponent
+},
+
 
 ];
 

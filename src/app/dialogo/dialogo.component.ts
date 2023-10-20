@@ -1,6 +1,6 @@
 import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {Articulo} from '../articulo';
+//import {Articulo} from '../articulo';
 
 @Component({
   selector: 'app-dialogo',
@@ -20,4 +20,9 @@ export class DialogoComponent implements OnInit {
     this.dialogRef.close();
   }
 
+}
+
+export class Articulo {
+  constructor(public codigo: number, public descripcion: string, public precio: number) {
+  }
 }

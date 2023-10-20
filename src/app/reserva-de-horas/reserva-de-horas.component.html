@@ -1,34 +1,71 @@
 
-<form [formGroup]="formularioContacto" (ngSubmit)="submit()">
-    <p>Nombre:
-      <input type="text" formControlName="nombre" required>
-      <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">
-        (El nombre no puede quedar vacío)
-      </span>
-      <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']">
-        (Debe tener como mínimo 10 caracteres)
-      </span>
-    </p>
-    <p>Mail:
-      <input type="text" formControlName="mail">
-      <span *ngIf="this.formularioContacto.get('mail')?.errors?.['required']">
-        (El mail no puede quedar vacío)
-      </span>
-      <span *ngIf="this.formularioContacto.get('mail')?.errors?.['email']">
-        (El mail no es válido)
-      </span>
-    </p>
-    <p>Mensaje<br>
-      <textarea rows="10" cols="70" formControlName="mensaje"></textarea>
-    </p>
-    <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">
-      (El mensaje no puede quedar vacío)
-    </div>
-    <div *ngIf="this.formularioContacto.get('mensaje')?.errors?.['maxlength']">
-      (Debe tener como máximo 500 caracteres)
-    </div>
-    <button type="submit">Confirmar</button>
-  </form>
-  <div>{{resultado}}</div>
+<!--Uso de MatDialog-->
+<div class="container c-principal">
+  
+    <button mat-raised-button (click)="abrirDialogo()">Nueva cita medica</button>
+</div>
 
+
+
+
+
+
+
+
+
+
+<!--Uso de contenedores y menus
+
+  <h2 style="text-align: center;">Reserva de Cita Médica</h2>
+
+  <div class="container c-principal" > <p>Container principal</p>
+
+    <p>Container 2</p>
+     
+     <div class="container c-secund">
+    
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>favorite</mat-icon>
+        Seleccione Area</button>
+
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Menu Item 1</button>
+        <button mat-menu-item>Menu Item 2</button>
+      </mat-menu>
+    
+    </div>
+
+    <div class="container c-secund">
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>assignment_ind</mat-icon>Seleccione Medico</button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Menu Item 1</button>
+        <button mat-menu-item>Menu Item 2</button>
+      </mat-menu>
+    
+    </div>
+
+    <div class="container c-secund">
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>domain</mat-icon>Seleccione Prevision</button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Menu Item 1</button>
+        <button mat-menu-item>Menu Item 2</button>
+      </mat-menu>
+    
+    </div>
+
+    <div class="container c-secund">
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>date_range</mat-icon>
+        Seleccione Fecha y Hora</button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Menu Item 1</button>
+        <button mat-menu-item>Menu Item 2</button>
+      </mat-menu>
+    
+    </div>
+
+  </div>
+-->
 
