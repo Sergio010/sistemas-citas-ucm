@@ -1,7 +1,16 @@
 .c-principal{
-    border-color: blue;
-    border-width: 1px;
-    border-style: solid;
-    height: 120%;
-    width: 100%;
+
+    width: 590px;  
+    height: 413px; 
+    height: auto;
+    overflow: hidden;
+}
+
+.botones{
+    margin-top: 0px;
+}
+
+.miForm{
+    margin: 2%;
+    padding: 5%;
 }

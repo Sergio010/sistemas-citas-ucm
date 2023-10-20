@@ -1,41 +1,43 @@
-<div class="container" style="position: fixed; margin-top: 4rem;">
 
-    <mat-sidenav-container class="container">
-  
-        <!-- side-nav -->
-      
-        <mat-sidenav mode="side" opened class="sidenav">
-  
-          <mat-toolbar class="toolbar">Usuario</mat-toolbar>
-          
-          <!-- Elements list menu -->
-      
-          <mat-list>
-            <mat-list-item><a href="home" style="color: white; text-decoration: none;">Home</a></mat-list-item>
-            <mat-list-item><a href="dashboard/citas-medicas" style="color: white; text-decoration: none;">Mis citas</a></mat-list-item>
-            <mat-list-item><a href="dashboard/reserva-cita" style="color: white; text-decoration: none;">Nueva cita</a></mat-list-item>
-           </mat-list>
-      
-        </mat-sidenav>
-      
-        <!-- side-nav-content -->
-      
-        <mat-sidenav-content>
-      
-            <mat-toolbar color="primary">
-                <div class="spacer"></div>
-                  <a mat-button href="exit" style="background-color: brown;">Cerrar Sesion</a>
-  
-            </mat-toolbar>
-      
-          <div class="spacer"></div>
-  
-          <div>
-            <router-outlet>
-            </router-outlet>
-          </div>
-  
-        </mat-sidenav-content>
-      
-      </mat-sidenav-container>
-  </div>
+  <div class="container" style="position: fixed; margin-top: 4rem;">
+
+      <mat-sidenav-container class="container">
+    
+           <!--side-nav-->
+        
+          <mat-sidenav mode="side" opened class="sidenav">
+    
+            <mat-toolbar class="toolbar">Usuario</mat-toolbar>
+            
+             <!--Elements list menu-->
+        
+            <mat-list>
+              <mat-list-item><a href="dashboard/registro-usuario" style="color: white; text-decoration: none;">Home</a></mat-list-item>
+              <mat-list-item><a href="dashboard/citas-medicas" style="color: white; text-decoration: none;">Mis citas</a></mat-list-item>
+              <mat-list-item><a href="dashboard/reserva-cita" style="color: white; text-decoration: none;">Nueva cita</a></mat-list-item>
+            </mat-list>
+        
+          </mat-sidenav>
+        
+         <!--side-nav-content-->
+        
+          <mat-sidenav-content>
+        
+              <mat-toolbar color="primary">
+                  <div class="spacer"></div>
+                    <a mat-button href="login" style="background-color: brown;">Cerrar Sesion</a>
+    
+              </mat-toolbar>
+        
+            <div class="spacer"></div>
+    
+            <div>
+              <router-outlet>
+              </router-outlet>
+            </div>
+    
+          </mat-sidenav-content>
+        
+        </mat-sidenav-container>
+    </div>
+

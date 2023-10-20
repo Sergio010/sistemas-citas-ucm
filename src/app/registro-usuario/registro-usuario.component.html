@@ -1,7 +1,7 @@
 
-<div class="container c-principal ">
+<div class="container c-principal">
     <h2 style="text-align: center;">Registro de Usuario</h2>
-    <form [formGroup]="formularioRegistro" (ngSubmit)="submit()" #form=ngForm>
+    <form [formGroup]="formularioRegistro" class="miForm" (ngSubmit)="submit()" #form=ngForm>
 
         <p>Nombre:
         <input type="text" formControlName="nombre" class="form-control" required>
@@ -65,8 +65,8 @@
             <span *ngIf="this.formularioRegistro.get('repeatPass')?.errors?.['minlength']">
             </span>
             </p>
-        <button type="submit" class="btn btn-danger">Cancelar</button>        
-        <button type="submit" [disabled]="!form.valid" class="btn btn-info">Confirmar</button>
+        <button type="submit" style="text-align: center;" class="btn btn-danger btnForm"><a href="login">Cancelar</a></button>        
+        <button type="submit" style="text-align: center; margin-left: 300px;" [disabled]="!form.valid" class="btn btn-info btnForm">Confirmar</button>
     </form>
-    <div>{{resultado}}</div>
+   
 </div>

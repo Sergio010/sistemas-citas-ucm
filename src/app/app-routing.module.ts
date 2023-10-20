@@ -30,8 +30,18 @@ const routes: Routes = [
 {
   path: 'dashboard', component: DashboardComponent,children:
   [{path:'reserva-cita',component:ReservaDeHorasComponent},
-   {path:'citas-medicas',component:CitasMedicasComponent}],
+   {path:'citas-medicas',component:CitasMedicasComponent},
+    {path:'registro-usuario',component:RegistroUsuarioComponent}
+    ],
   
+},
+
+{
+  path: 'citas-medicas', component: CitasMedicasComponent
+},
+
+{
+  path: 'reserva-cita', component: ReservaDeHorasComponent
 },
 
 {
@@ -42,6 +52,9 @@ const routes: Routes = [
   path:'dashboard',component:DashboardComponent
 },
 
+{
+  path:'**',redirectTo:'home'
+}
 
 ];
 

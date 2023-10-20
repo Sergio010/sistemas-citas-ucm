@@ -1,19 +1,21 @@
 <div>
-    <h1 mat-dialog-title>Artículo</h1>
+    <h1 mat-dialog-title>Cita Medica</h1>
     <div mat-dialog-content>
         <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
 
             <mat-form-field>
-                <input matInput [(ngModel)]="data.codigo" type="number" placeholder="Ingrese código">
+                <input class="form-control" [(ngModel)]="data.codigo" type="text" placeholder="Ingrese codigo">
             </mat-form-field>
 
             <mat-form-field>
-                <input matInput [(ngModel)]="data.descripcion" type="text" placeholder="Ingrese descripción">
+                <input matInput class="form-control" [(ngModel)]="data.nombre_medico" type="text" placeholder="Ingrese medico">
             </mat-form-field>
 
             <mat-form-field>
-                <input matInput [(ngModel)]="data.precio" type="number" placeholder="Ingrese precio">
+                <input matInput class="form-control" [(ngModel)]="data.fecha_cita" type="text" placeholder="Ingrese fecha">
             </mat-form-field>
+
+
 
         </div>
     </div>
@@ -22,3 +24,26 @@
         <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Confirmar</button>
     </div>
 </div>
+
+<!--
+            <mat-form-field>
+                <input matInput  class="form-control" [(ngModel)]="data.rut" type="text" placeholder="Ingrese rut">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput class="form-control" [(ngModel)]="data.area" type="text" placeholder="Ingrese area">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput class="form-control" [(ngModel)]="data.nombre_medico" type="text" placeholder="Ingrese nombre medico">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput class="form-control" [(ngModel)]="data.fecha_cita" type="text" placeholder="Ingrese fecha">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput class="form-control" [(ngModel)]="data.hora" type="text" placeholder="Ingrese hora">
+            </mat-form-field>
+
+-->

@@ -52,6 +52,7 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
 import { CitasMedicasComponent } from './citas-medicas/citas-medicas.component';
 
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -96,7 +97,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatTableModule,
     MatDialogModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

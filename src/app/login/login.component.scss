@@ -17,13 +17,14 @@ margin-top: 0px; // establece el área del margen en la parte superior de un ele
 border-color: navy;
 border-width: 1px;
 border-style: solid;
+margin-top: 80px;
 }
 
 .container-padre{
 
     display: flex;
     justify-content: center;
-    background-color:#253e85;
+    //background-color:#253e85;
     font-family: 'Montserrat', sans-serif;
 }
 .l1{
@@ -31,15 +32,18 @@ border-style: solid;
 }
 
 .h3{
-    color: #039be5;
+    color: #2B7FCA;
     text-align: center;
     margin-top: 12px;
     margin-left: 30px;
+    font-weight: bold;
 }
 
 .btnS{ 
 
     margin-left: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .inputStyle{
@@ -48,3 +52,4 @@ border-style: solid;
     margin-right: 5%;
 
 }
+

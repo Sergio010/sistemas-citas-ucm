@@ -8,6 +8,8 @@ import { DialogoComponent } from '../dialogo/dialogo.component';
 import { MatTable } from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
 
+import { Cita } from '../cita';
+
 @Component({
   selector: 'app-reserva-de-horas',
   templateUrl: './reserva-de-horas.component.html',
@@ -15,27 +17,27 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 
 export class ReservaDeHorasComponent {
-  columnas: string[] = ['codigo', 'descripcion', 'precio', 'borrar'];
+  columnas: string[] = ['codigo', 'nombre_medico','fecha'];
 
-  datos: Articulo[] = [new Articulo(1, 'papas', 55),
-  new Articulo(2, 'manzanas', 53),
-  new Articulo(3, 'naranjas', 25),
+  datos: Cita[] = [new Cita(1,'Lautaro Martinez', '12/02/2023'),
+                  new Cita(2,'Lautaro Martinez', '17/02/2023'),
+
   ];
 
-  ds = new MatTableDataSource<Articulo>(this.datos);
+  ds = new MatTableDataSource<Cita>(this.datos);
 
-  @ViewChild(MatTable) tabla1!: MatTable<Articulo>;
+  @ViewChild(MatTable) tabla1!: MatTable<Cita>;
 
   constructor(public dialog: MatDialog) { }
 
   abrirDialogo() {
     const dialogo1 = this.dialog.open(DialogoComponent, {
-      data: new Articulo(0, '', 0)
+      data: new Cita(0, '','')
     });
 
-    dialogo1.afterClosed().subscribe(art => {
-      if (art != undefined)
-        this.agregar(art);
+    dialogo1.afterClosed().subscribe(cit => {
+      if (cit != undefined)
+        this.agregar(cit);
     });
   }
 
@@ -45,8 +47,9 @@ export class ReservaDeHorasComponent {
       this.tabla1.renderRows();
     }
   }
-  agregar(art: Articulo) {
-    this.datos.push(new Articulo(art.codigo, art.descripcion, art.precio));
+  agregar(cit: Cita) {
+    this.datos.push(new Cita(cit.codigo,
+      cit.nombre_medico,cit.fecha_cita,));
     this.tabla1.renderRows();
   }
 }

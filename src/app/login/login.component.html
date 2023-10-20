@@ -71,7 +71,7 @@
 	<div class="container-login">
 
 		<form style="margin-right: 5%;" (ngSubmit)="submit()" #forma="ngForm">
-			<h3 class="h3">Inicio de sesión</h3>
+			<h3 class="h3"><strong>Inicio de sesión</strong></h3>
 			<hr/>
 
 			<!--entrada de datos para el campo "name"-->
@@ -145,7 +145,7 @@
 			<!--validacion del campo contraseña-->
 			<div class="invalid-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
 				<div *ngIf="password.errors?.['required']">
-					Introduzca una contraseña por favor
+					Introduzca una contraseña
 				</div>
 			</div>
 
@@ -172,12 +172,12 @@
 			<div class="row" style="text-align: center; display: block; margin-left: 15%;">
 				<div class="col-lg">
 					<button class="btn btn-danger"><a href="home" style="color: white; text-decoration: none;">Volver</a></button>
-					<button type="submit" [disabled]="!forma.valid" class="btn btn-success btnS">Iniciar sesión</button>
+					<button type="submit" class="btn btn-success btnS " style="text-decoration: none;"><a href="dashboard" style="text-decoration: none; color: white;">Iniciar sesión</a></button>
 				</div>
 			</div>
 			<div class="row" style="text-align: center; margin-top: 8px; margin-left: 30px;">
 				<div class="col-lg">
-					<p style="color: #253e85; font-family: 'Montserrat', sans-serif ;">No estas registrado? <a href="registro-usuario " style="text-decoration: none; color: #253e85;">Registrate aqui</a></p>
+					<p style="color: black; font-family: 'Montserrat', sans-serif ;">No estas registrado? <a href="registro-usuario " style="text-decoration: none; color: #253e85;">Registrate aqui</a></p>
 				</div>
 			</div>
 		</form>
