@@ -1,1 +1,72 @@
-<p>registro-usuario works!</p>
+
+<div class="container c-principal ">
+    <h2 style="text-align: center;">Registro de Usuario</h2>
+    <form [formGroup]="formularioRegistro" (ngSubmit)="submit()" #form=ngForm>
+
+        <p>Nombre:
+        <input type="text" formControlName="nombre" class="form-control" required>
+        <span *ngIf="this.formularioRegistro.get('nombre')?.errors?.['required']">
+        </span>
+
+        <span *ngIf="this.formularioRegistro.get('nombre')?.errors?.['minlength']">
+        </span>
+        </p>
+
+        <p>Apellido:
+            <input type="text" formControlName="apellido" class="form-control" required>
+            <span *ngIf="this.formularioRegistro.get('apellido')?.errors?.['required']">
+            </span>
+    
+            <span *ngIf="this.formularioRegistro.get('apellido')?.errors?.['minlength']">
+            </span>
+            </p>
+
+        <p>RUT:
+            <input type="text" formControlName="rut" class="form-control" required>
+            <span *ngIf="this.formularioRegistro.get('rut')?.errors?.['required']">
+            </span>
+    
+            <span *ngIf="this.formularioRegistro.get('rut')">
+            </span>
+            </p>
+
+        <p>Email:
+        <input type="text" formControlName="mail" class="form-control">
+        <span *ngIf="this.formularioRegistro.get('mail')?.errors?.['required']">
+        </span>
+        <span *ngIf="this.formularioRegistro.get('mail')?.errors?.['email']">
+            (El mail no es válido)
+        </span>
+        </p>
+
+        <p>Telefono:
+            <input type="text" formControlName="telefono" class="form-control" required>
+            <span *ngIf="this.formularioRegistro.get('telefono')?.errors?.['required']">
+            </span>
+        </p>  
+
+        <p>Contraseña:
+            <input type="text" formControlName="password" class="form-control" required>
+            <span *ngIf="this.formularioRegistro.get('password')?.errors?.['required']">
+                (Campo obligatorio)
+            </span>
+    
+            <span *ngIf="this.formularioRegistro.get('password')?.errors?.['minlength']">
+                (Debe tener como mínimo 10 caracteres)
+            </span>
+            </p>
+
+        <p>Repetir Contraseña:
+            <input type="text" formControlName="repeatPass" class="form-control" required>
+            <span *ngIf="this.formularioRegistro.get('repeatPass')?.errors?.['required']">
+                (Campo obligatorio)
+            </span>
+    
+            <span *ngIf="this.formularioRegistro.get('repeatPass')?.errors?.['minlength']">
+            </span>
+            </p>
+        <button type="submit" class="btn btn-danger">Cancelar</button>        
+        <button type="submit" [disabled]="!form.valid" class="btn btn-info">Confirmar</button>
+    </form>
+    <div>{{resultado}}</div>
+</div>

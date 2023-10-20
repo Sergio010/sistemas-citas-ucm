@@ -8,6 +8,8 @@ import { ArticulosService } from './articulos.service';
 
 import { PacienteComponent } from './paciente/paciente.component';
 import { LoginComponent } from './login/login.component';
+import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 {
@@ -15,9 +17,11 @@ const routes: Routes = [
 },
 
 {
+  path: 'registro-usuario', component: RegistroUsuarioComponent
 },
 
 {
+  path: 'home', component: HomeComponent
 },
 
 {
