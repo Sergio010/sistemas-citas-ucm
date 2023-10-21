@@ -1,3 +1,11 @@
+
+body{
+   /* background-image: url('');*/
+    background-color: #DBE3F0;
+}
+
+
+
 .c-principal{
 
     width: 590px;  
@@ -13,4 +21,51 @@
 .miForm{
     margin: 2%;
     padding: 5%;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.miForm{
+    background-color:#253e85 ;
+    
+}
+.miForm text{
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.miForm input{
+    border: none;
+    padding: 2px;
+    border-radius: 10px;
+    margin-bottom: 1px;
+    border: 1px solid #1f53c5;
+}
+
+.miForm span{
+    font-size: 13px;
+}
+
+.t1 terminos{
+    text-align: center;
+    margin-top: 10px;
+}
+.miForm p{
+    color: white;
+}
+
+.miForm h2{
+    color: white;
+    padding-top: 10px;
+}
+
+.miForm a:hover{
+    text-decoration: underline;
+    color: white;
+
+}
+
+.t1{
+    margin-top:20px ;
+
 }

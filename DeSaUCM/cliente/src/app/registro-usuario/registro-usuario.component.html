@@ -1,72 +1,83 @@
 
 <div class="container c-principal">
-    <h2 style="text-align: center;">Registro de Usuario</h2>
-    <form [formGroup]="formularioRegistro" class="miForm" (ngSubmit)="submit()" #form=ngForm>
+        <form [formGroup]="formularioRegistro" class="miForm" (ngSubmit)="submit()" #form=ngForm>
+            <h2 style="text-align: center;"><strong>Registro de Usuario</strong></h2>
 
-        <p>Nombre:
-        <input type="text" formControlName="nombre" class="form-control" required>
-        <span *ngIf="this.formularioRegistro.get('nombre')?.errors?.['required']">
-        </span>
-
-        <span *ngIf="this.formularioRegistro.get('nombre')?.errors?.['minlength']">
-        </span>
-        </p>
-
-        <p>Apellido:
-            <input type="text" formControlName="apellido" class="form-control" required>
-            <span *ngIf="this.formularioRegistro.get('apellido')?.errors?.['required']">
+            <p>Nombre:
+            <input type="text" formControlName="nombre" class="form-control myForm" required>
+            <span *ngIf="this.formularioRegistro.get('nombre')?.errors?.['required']">
             </span>
-    
-            <span *ngIf="this.formularioRegistro.get('apellido')?.errors?.['minlength']">
+
+            <span *ngIf="this.formularioRegistro.get('nombre')?.errors?.['minlength']">
             </span>
             </p>
 
-        <p>RUT:
-            <input type="text" formControlName="rut" class="form-control" required>
-            <span *ngIf="this.formularioRegistro.get('rut')?.errors?.['required']">
+            <p>Apellido:
+                <input type="text" formControlName="apellido" class="form-control myForm" required>
+                <span *ngIf="this.formularioRegistro.get('apellido')?.errors?.['required']">
+                </span>
+        
+                <span *ngIf="this.formularioRegistro.get('apellido')?.errors?.['minlength']">
+                </span>
+                </p>
+
+            <p>RUT:
+                <input type="text" formControlName="rut" class="form-control myForm" required>
+                <span *ngIf="this.formularioRegistro.get('rut')?.errors?.['required']">
+                </span>
+        
+                <span *ngIf="this.formularioRegistro.get('rut')">
+                </span>
+                </p>
+
+            <p>Email:
+            <input type="text" formControlName="mail" class="form-control myForm">
+            <span *ngIf="this.formularioRegistro.get('mail')?.errors?.['required']">
             </span>
-    
-            <span *ngIf="this.formularioRegistro.get('rut')">
+            <span *ngIf="this.formularioRegistro.get('mail')?.errors?.['email']">
+                (El mail no es válido)
             </span>
             </p>
 
-        <p>Email:
-        <input type="text" formControlName="mail" class="form-control">
-        <span *ngIf="this.formularioRegistro.get('mail')?.errors?.['required']">
-        </span>
-        <span *ngIf="this.formularioRegistro.get('mail')?.errors?.['email']">
-            (El mail no es válido)
-        </span>
-        </p>
+            <p>Telefono:
+                <input type="text" formControlName="telefono" class="form-control myForm" required>
+                <span *ngIf="this.formularioRegistro.get('telefono')?.errors?.['required']">
+                </span>
+            </p>  
 
-        <p>Telefono:
-            <input type="text" formControlName="telefono" class="form-control" required>
-            <span *ngIf="this.formularioRegistro.get('telefono')?.errors?.['required']">
-            </span>
-        </p>  
+            <p>Contraseña:
+                <input type="text" formControlName="password" class="form-control MyForm" required>
+                <span *ngIf="this.formularioRegistro.get('password')?.errors?.['required']">
+                    (Campo obligatorio)
+                </span>
+        
+                <span *ngIf="this.formularioRegistro.get('password')?.errors?.['minlength']">
+                    (Debe tener como mínimo 10 caracteres)
+                </span>
+                </p>
 
-        <p>Contraseña:
-            <input type="text" formControlName="password" class="form-control" required>
-            <span *ngIf="this.formularioRegistro.get('password')?.errors?.['required']">
-                (Campo obligatorio)
-            </span>
-    
-            <span *ngIf="this.formularioRegistro.get('password')?.errors?.['minlength']">
-                (Debe tener como mínimo 10 caracteres)
-            </span>
-            </p>
+            <p>Repetir Contraseña:
+                <input type="text" formControlName="repeatPass" class="form-control myForm" required>
+                <span *ngIf="this.formularioRegistro.get('repeatPass')?.errors?.['required']">
+                    (Campo obligatorio)
+                </span>
+        
+                <span *ngIf="this.formularioRegistro.get('repeatPass')?.errors?.['minlength']">
+                </span>
+                </p>
+            <div>
+                <span>
+                    <p style="color: white;">{{this.resultado}}</p>
+                </span>
+            </div>
+            
+            <button type="submit" style="text-align: center;" class="btn btn-danger btnForm"><a href="login" style="text-decoration: none; color: white;">Cancelar</a></button>        
+            <button type="submit" style="text-align: center; margin-left: 300px; color: white;" [disabled]="form.valid" class="btn btn-info btnForm">Confirmar</button>
+            <br>
+            <div class="t1">
+                <p class="terminos"><input type="checkbox" id="" name="" value="" required>
+                    Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            </div>
+        </form>
 
-        <p>Repetir Contraseña:
-            <input type="text" formControlName="repeatPass" class="form-control" required>
-            <span *ngIf="this.formularioRegistro.get('repeatPass')?.errors?.['required']">
-                (Campo obligatorio)
-            </span>
-    
-            <span *ngIf="this.formularioRegistro.get('repeatPass')?.errors?.['minlength']">
-            </span>
-            </p>
-        <button type="submit" style="text-align: center;" class="btn btn-danger btnForm"><a href="login">Cancelar</a></button>        
-        <button type="submit" style="text-align: center; margin-left: 300px;" [disabled]="!form.valid" class="btn btn-info btnForm">Confirmar</button>
-    </form>
-   
 </div>

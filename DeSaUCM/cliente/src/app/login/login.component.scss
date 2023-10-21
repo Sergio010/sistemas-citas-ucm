@@ -1,13 +1,12 @@
 
 .container-login{
 
-    
+background-color: white;   
 width: 590px;  //establece el ancho de un elemento.
 height: 413px; //especifica la altura de un elemento
 padding: 5px; // establece el área de relleno en los cuatro lados de un elemento a la vez.
 border-radius: 50px; //redondea las esquinas del borde exterior de un elemento. 
 -webkit-shape-inside: rectangle(0,0,100%,100%,50px,50px); //La propiedad interna permite que el contenido en línea fluya dentro de rutas definidas de forma personalizada, como círculos, polígonos y elipses.
-background-color: white; //color de fondo
 font-size: 0.9em; // establece el tamaño de la fuente.
 text-align: justify; //establece la alineación horizontal del contenido de nivel en línea dentro de un elemento de bloque o cuadro de celda de tabla. 
 padding: 0rem; //establece el área de relleno en los cuatro lados de un elemento a la vez.
@@ -18,6 +17,7 @@ border-color: navy;
 border-width: 1px;
 border-style: solid;
 margin-top: 80px;
+
 }
 
 .container-padre{
@@ -53,3 +53,6 @@ margin-top: 80px;
 
 }
 
+.container-login fomr{
+    width: 600px;
+}

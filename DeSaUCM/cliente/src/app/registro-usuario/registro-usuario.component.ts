@@ -16,9 +16,9 @@ export class RegistroUsuarioComponent {
     apellido:['',Validators.required],
     rut:['',Validators.required],
     mail: ['', [Validators.required, Validators.email]],
-    telefono:['',Validators.required],
-    password:['',Validators.required],
-    repeatPass:['',Validators.required]
+    telefono:['',],
+    password:['',],
+    repeatPass:['',]
   });
 
   submit() {
