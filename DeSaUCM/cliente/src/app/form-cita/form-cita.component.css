@@ -1,0 +1,25 @@
+
+
+.form-citas{
+    border-color: brown;
+    background-color: #CAD4EA;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding-left: 20px;
+    width: 530px;
+    height:650px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+    
+}
+
+.form-citas h2{
+    color: #3356A3;
+    padding-top: 40px;
+}
+
+.form-citas mat-form-field{
+    font-family: 'Montserrat', sans-serif;
+
+}

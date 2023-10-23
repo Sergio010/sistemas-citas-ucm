@@ -1,0 +1,73 @@
+
+<div class="form-citas">
+    <h2><strong>Reserva de Citas</strong></h2>
+    <mat-form-field>
+        <mat-label>Codigo Usario</mat-label>
+        <input matInput #message [disabled]="true">
+      </mat-form-field>
+      <br>
+
+      
+      <mat-form-field>
+        <mat-label>Especialidad</mat-label>
+        <mat-select>
+          <mat-option value="espec" *ngFor="let espec of medicos">{{espec.especialid}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+       <br>
+
+       <mat-form-field>
+         <mat-label>Selecione Medico</mat-label>
+         <mat-select name = "Miselect">
+           <mat-option value="medico" *ngFor="let espec of medicos">{{espec.nombre_medic}}</mat-option>
+         </mat-select>
+       </mat-form-field>
+
+       <br>
+      <mat-form-field>
+        <mat-label>Selecione Prevision</mat-label>
+        <mat-select>
+          <mat-option value="prev" *ngFor="let prev of prevs">{{prev}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <br>
+
+      <!--Crear un select que indique todas las fechas y horas disponibles de cada medico
+        y que al reservar una fecha, esta no pueda ser tomada por otro usuario.
+    
+    
+    -->
+
+    <mat-form-field>
+        <mat-label>Selecione Fecha</mat-label>
+        <mat-select> <!--usar el arreglo de horas aca con ngFor-->
+          <mat-option value="item" *ngFor=" let item of medicos">{{item.fecha}}</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+    <br>
+
+      <mat-form-field>
+        <mat-label>Descripcion</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <!--
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    -->
+      <br>
+      <button mat-button style="background-color: red;color: white;">Cancelar</button>
+
+      <button mat-button style="background-color: white;">Reservar</button>
+
+      <br>
+
+
+
+</div>

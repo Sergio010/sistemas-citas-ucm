@@ -54,6 +54,11 @@ import { CitasMedicasComponent } from './citas-medicas/citas-medicas.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSortModule } from '@angular/material/sort';
 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormCitaComponent } from './form-cita/form-cita.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -73,6 +78,7 @@ import { MatSortModule } from '@angular/material/sort';
     LoginComponent,
     RegistroUsuarioComponent,
     CitasMedicasComponent,
+    FormCitaComponent,
   ],
   imports: [
     BrowserModule,
@@ -98,7 +104,10 @@ import { MatSortModule } from '@angular/material/sort';
     MatDialogModule,
     ReactiveFormsModule,
     MatMenuModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
