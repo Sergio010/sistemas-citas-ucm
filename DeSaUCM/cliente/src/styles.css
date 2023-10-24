@@ -1,6 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files 
+
+.html, body{
+    background-image: url('assets/imagenes/fondo.png');
+    background-size: 100%;
+}
+*/
+
+/*
+.html, body{
+    background: #becef1; 
+    background: linear-gradient(90deg, #e5e4f7, #F0F2F0);  
+    background: -webkit-linear-gradient(to bottom, #f0f2f0, #000c40); 
+
+    }
 
 
+
+/*
+.html,body {
+    background: rgb(247,247,249);
+    background: linear-gradient(90deg, rgba(247,247,249,1) 0%, rgba(229,228,247,1) 0%, rgba(37,62,133,1) 50%, rgba(239,241,245,1) 100%);
+}
+
+*/
 /*
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

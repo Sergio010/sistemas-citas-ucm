@@ -21,6 +21,9 @@ export class FormCitaComponent implements OnInit {
 
   prevs:string[]=["Fonasa","Isapre"];
 
+  
+  horas : string[]=['23/03/2023', '23/01/2023','14/06/2023'];
+
    
 
   medicos: Medico[] = [ new Medico(1,'Juan perez', 0, 'Oftalmologia',new Date(Date.now())),
@@ -30,6 +33,13 @@ export class FormCitaComponent implements OnInit {
 
   ] 
 
+  objt: Object[] = [new Especialidad(1,'Oftalmologia'),
+                   new Medico(0,'',2,'',new Date),
+                   new Fecha(0, new Date(Date.now())),
+
+                   new Reserva(1,new Medico(0,'',2,'',new Date),new Especialidad(1,'Oftalmologia'),
+                   new Fecha(0, new Date(Date.now())))
+]
 
   constructor(){}
 
@@ -47,6 +57,38 @@ export class Medico {
     this.codigo_espec = codigo_espec;
     this.especialid = especialid;
     this.fecha = fecha;
+
+  }
+}
+
+export class Especialidad {
+  constructor( 
+    public codigo_espes:number, public n_especialid:string){
+
+    this.codigo_espes = codigo_espes;
+    this.n_especialid = n_especialid;
+
+  }
+}
+
+export class Fecha {
+  constructor( 
+    public codigo_fecha: number, public fecha:Date){
+
+    this.codigo_fecha = codigo_fecha;
+    this.fecha = fecha;
+
+  }
+}
+
+export class Reserva{
+  constructor( 
+    public id_reserva: number, public Medico: Medico, public Espe:Especialidad, public fecha_h: Fecha){
+    
+    this.id_reserva = id_reserva;
+    this.Medico = Medico;
+    this.Espe = Espe;
+    this.fecha_h = fecha_h;
 
   }
 }

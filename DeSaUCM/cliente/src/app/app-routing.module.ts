@@ -29,7 +29,7 @@ const routes: Routes = [
 },
 
 {
-  path: 'dashboard', component: DashboardComponent,children:
+  path: 'dashboard', component: DashboardComponent, children:
   [{path:'reserva-cita',component:ReservaDeHorasComponent},
    {path:'citas-medicas',component:CitasMedicasComponent},
     {path:'registro-usuario',component:RegistroUsuarioComponent},

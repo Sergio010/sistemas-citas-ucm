@@ -1,7 +1,7 @@
 
 <div class="container c-principal">
         <form [formGroup]="formularioRegistro" class="miForm" (ngSubmit)="submit()" #form=ngForm>
-            <h2 style="text-align: center;"><strong>Registro de Usuario</strong></h2>
+            <h2 style="text-align: center; font-weight: bold;"><strong>Registro</strong></h2>
 
             <p>Nombre:
             <input type="text" formControlName="nombre" class="form-control myForm" required>
@@ -71,7 +71,7 @@
                 </span>
             </div>
             
-            <button type="submit" style="text-align: center;" class="btn btn-danger btnForm"><a href="login" style="text-decoration: none; color: white;">Cancelar</a></button>        
+            <button type="submit" style="text-align: center;" class="btn btn-danger btnForm"><a href="home" style="text-decoration: none; color: white;">Cancelar</a></button>        
             <button type="submit" style="text-align: center; margin-left: 300px; color: white;" [disabled]="form.valid" class="btn btn-info btnForm">Confirmar</button>
             <br>
             <div class="t1">

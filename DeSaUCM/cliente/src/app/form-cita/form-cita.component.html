@@ -33,34 +33,54 @@
 
 
       <br>
+      
+      
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
 
       <!--Crear un select que indique todas las fechas y horas disponibles de cada medico
         y que al reservar una fecha, esta no pueda ser tomada por otro usuario.
     
     
     -->
-
+    <!--
     <mat-form-field>
         <mat-label>Selecione Fecha</mat-label>
-        <mat-select> <!--usar el arreglo de horas aca con ngFor-->
+        <mat-select> <!--usar el arreglo de horas aca con ngFor
           <mat-option value="item" *ngFor=" let item of medicos">{{item.fecha}}</mat-option>
 
         </mat-select>
       </mat-form-field>
 
     <br>
+    -->
 
+    <br>
       <mat-form-field>
         <mat-label>Descripcion</mat-label>
         <textarea matInput></textarea>
       </mat-form-field>
-      <!--
-      <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+
+ 
+    
+  
+
+    <!--
+    <br>
+    <mat-form-field>
+      <mat-label>Selecione fecha</mat-label>
+      <mat-select> <!--usar el arreglo de horas aca con ngFor
+        <mat-option value="medic" *ngFor=" let medic of horas ">{{medic}}</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
     -->
+
+
       <br>
       <button mat-button style="background-color: red;color: white;">Cancelar</button>
 
