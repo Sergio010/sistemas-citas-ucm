@@ -16,17 +16,11 @@
                 <input type="text" formControlName="apellido" class="form-control myForm" required>
                 <span *ngIf="this.formularioRegistro.get('apellido')?.errors?.['required']">
                 </span>
-        
-                <span *ngIf="this.formularioRegistro.get('apellido')?.errors?.['minlength']">
-                </span>
                 </p>
 
             <p>RUT:
                 <input type="text" formControlName="rut" class="form-control myForm" required>
                 <span *ngIf="this.formularioRegistro.get('rut')?.errors?.['required']">
-                </span>
-        
-                <span *ngIf="this.formularioRegistro.get('rut')">
                 </span>
                 </p>
 
@@ -62,22 +56,22 @@
                     (Campo obligatorio)
                 </span>
         
-                <span *ngIf="this.formularioRegistro.get('repeatPass')?.errors?.['minlength']">
-                </span>
-                </p>
             <div>
                 <span>
-                    <p style="color: white;">{{this.resultado}}</p>
+                    <p style="color: red;">{{this.resultado}}</p>
                 </span>
             </div>
-            
-            <button type="submit" style="text-align: center;" class="btn btn-danger btnForm"><a href="home" style="text-decoration: none; color: white;">Cancelar</a></button>        
-            <button type="submit" style="text-align: center; margin-left: 300px; color: white;" [disabled]="form.valid" class="btn btn-info btnForm">Confirmar</button>
-            <br>
+
+            <!--
             <div class="t1">
                 <p class="terminos"><input type="checkbox" id="" name="" value="" required>
                     Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             </div>
+            -->
+            <button type="submit" style="text-align: center;" class="btn btn-danger btnForm"><a href="home" style="text-decoration: none; color: white;">Cancelar</a></button>        
+            <button type="submit" style="text-align: center; margin-left: 300px; color: white;" class="btn btn-info btnForm">Confirmar</button>
+            <br>
+
         </form>
 
 </div>

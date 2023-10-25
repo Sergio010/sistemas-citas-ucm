@@ -60,11 +60,19 @@
   width: 100%; 
   min-height: 71vh;
   justify-content: center;
-  background-size:cover;
+  /*background-size:contain;*/
   background-position:center;
+  background-position: 1px -220px;
   background-repeat:no-repeat;	
   margin:0px;
   display: block;
+  /*background-size: 20px 40px;*/
+  /* dimensiona la imagen 20px de ancho y 40px de altura */
+
+}
+
+.info img{
+  object-fit: contain;
 
 }
 
